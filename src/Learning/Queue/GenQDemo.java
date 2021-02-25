@@ -2,7 +2,7 @@ package Learning.Queue;
 
 public class GenQDemo {
     public static void main(String[] args) {
-        Integer iStore[] = new Integer[10];
+        Integer[] iStore = new Integer[10];
         GenQueue<Integer> q = new GenQueue<Integer>(iStore);
 
         Integer iVal;
@@ -33,7 +33,7 @@ public class GenQDemo {
 
         System.out.println();
 
-        Double dStore[] = new Double[10];
+        Double[] dStore = new Double[10];
 
         GenQueue<Double> q2 = new GenQueue<Double>(dStore);
 

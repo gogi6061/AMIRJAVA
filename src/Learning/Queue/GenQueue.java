@@ -1,7 +1,7 @@
 package Learning.Queue;
 
 public class GenQueue<T> implements IGen<T> {
-    private T q[];
+    private T[] q;
 
     private int putloc, getloc;
 
