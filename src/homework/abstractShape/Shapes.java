@@ -3,7 +3,7 @@ package homework.abstractShape;
 import java.util.*;
 
 public class Shapes {
-    private List<Shape> arrays = new ArrayList<>();
+    private List<Shape> arrays  = new ArrayList<>();
 
     public Shapes(Shape... shapeArray) {
         arrays.addAll(Arrays.asList(shapeArray));
@@ -11,7 +11,8 @@ public class Shapes {
     }
 
 
-    public void getShapesList() {
+
+    public  void getShapesList() {
         for (int i = 0; i < arrays.size(); i++) {
 
 

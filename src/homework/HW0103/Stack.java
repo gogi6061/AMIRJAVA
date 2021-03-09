@@ -14,7 +14,7 @@ public class Stack<T> implements Iterable<T> {
         return new StackIterator();
     }
 
-    class StackIterator implements Iterator<T> {
+    class StackIterator implements Iterator<T>  {
         int x = 0;
 
 
@@ -30,6 +30,7 @@ public class Stack<T> implements Iterable<T> {
             return im;
 
         }
+
 
 
     }

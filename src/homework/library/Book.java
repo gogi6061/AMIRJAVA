@@ -10,7 +10,7 @@ public class Book {
     private int colvo;
 
 
-    Predicate<Integer> checkColvo = check -> check > 0;
+    Predicate<Integer> checkColvo = check -> check>0;
 
 
     public int getColvo() {
@@ -32,7 +32,7 @@ public class Book {
         this.colvo = colvo;
     }
 
-    public Book() {
+    public Book(){
 
     }
 
@@ -59,7 +59,7 @@ public class Book {
 
 
     @Override
-    public String toString() {
+    public String toString(){
         return this.getName();
     }
 }

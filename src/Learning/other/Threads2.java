@@ -1,8 +1,8 @@
 package Learning.other;
 
-import java.util.Scanner;
-
 public class Threads2 {
+
+
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -12,7 +12,7 @@ public class Threads2 {
 
         synchronized (t) {
 
-            t1 = new Thread(() -> {
+             t1 = new Thread(() -> {
                 for (int i = 0; i < 100_000_000; i++) {
                     t.a++;
                 }
@@ -20,7 +20,7 @@ public class Threads2 {
         }
         synchronized (t) {
 
-            t2 = new Thread(() -> {
+             t2 = new Thread(() -> {
 
                 for (int i = 0; i < 100_000_000; i++) {
                     t.a--;
@@ -30,9 +30,9 @@ public class Threads2 {
         }
 
 
-        t1.start();
-        t2.start();
-        t2.join();
+            t1.start();
+            t2.start();
+            t2.join();
 
 
         System.out.println(t.getA());

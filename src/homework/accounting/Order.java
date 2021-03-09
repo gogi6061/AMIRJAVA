@@ -6,6 +6,7 @@ public class Order {
     private Goods goods;
 
 
+
     public Order(Buyer buyer, Goods goods) {
         this.buyer = buyer;
         this.goods = goods;

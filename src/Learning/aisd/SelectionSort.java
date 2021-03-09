@@ -1,5 +1,7 @@
 package Learning.aisd;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class SelectionSort {
@@ -19,8 +21,8 @@ public class SelectionSort {
                 if (list.get(j) < min) {
                     int tmp = min;
                     min = list.get(j);
-                    list.set(i, min);
-                    list.set(j, tmp);
+                    list.set(i,min);
+                    list.set(j,tmp);
 
 
                 }

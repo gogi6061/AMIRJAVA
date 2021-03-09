@@ -1,13 +1,10 @@
 package Learning.Queue;
 
-public class QueueFullException extends Exception {
+public class QueueFullException extends Exception{
     int size;
+    QueueFullException(int s){ size = s;}
 
-    QueueFullException(int s) {
-        size = s;
-    }
-
-    public String toString() {
+    public String toString(){
         return "\n Очередь заполнениа";
     }
 }

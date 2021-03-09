@@ -15,9 +15,9 @@ public class FunctionalsInterfaces {
 
         try (Scanner scan = new Scanner(System.in).useDelimiter(" ");
              BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            List<String> list = new ArrayList<>();
+            List<String>  list = new ArrayList<>();
 
-            Map<String, Long> map = reader
+          Map<String, Long> map  =   reader
                     .lines()
                     .map(line -> line.split("[^a-zA-Zа-яА-Я0-9']+"))
                     .flatMap(Arrays::stream)
