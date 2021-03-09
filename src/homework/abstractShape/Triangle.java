@@ -6,9 +6,9 @@ public class Triangle extends Shape {
     private double z;
 
     @Override
-    public double getArea(){
-        double p = ((a+b+z))/2;
-        double area = Math.round(Math.sqrt(p*(p-a)*(p-b)*(p-z)));
+    public double getArea() {
+        double p = ((a + b + z)) / 2;
+        double area = Math.round(Math.sqrt(p * (p - a) * (p - b) * (p - z)));
         return area;
 
     }
@@ -21,7 +21,7 @@ public class Triangle extends Shape {
             this.a = a;
             this.b = b;
             this.z = z;
-        }catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println(e.getMessage());
         }
     }

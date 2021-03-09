@@ -45,12 +45,10 @@ public class Visitor {
                 break;
             }
         }
-        if (book1==null) {
+        if (book1 == null) {
             System.out.println("У вас нет этой книги");
         }
     }
-
-
 
 
     @Override

@@ -10,12 +10,7 @@ public class ArrayCountV2 {
     public static void main(String[] args) throws InterruptedException {
         long a = System.currentTimeMillis();
 
-        Arrays.fill(array,1.0f);
-
-
-
-
-
+        Arrays.fill(array, 1.0f);
 
 
         Thread t1 = new Thread(() -> {

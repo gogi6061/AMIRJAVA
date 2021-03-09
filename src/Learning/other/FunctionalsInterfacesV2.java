@@ -13,7 +13,7 @@ public class FunctionalsInterfacesV2 {
 
     public static void main(String[] args) {
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             reader
                     .lines()
                     .map(line -> line.split("[^a-zA-Zа-яА-Я0-9']+"))

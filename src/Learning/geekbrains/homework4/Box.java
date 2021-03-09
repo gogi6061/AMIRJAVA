@@ -13,28 +13,28 @@ public class Box<T extends Fruit> {
         return arrayFriuts.get(num);
     }
 
-    public void setArrayFriuts(T... fruits){
+    public void setArrayFriuts(T... fruits) {
         arrayFriuts.addAll(Arrays.asList(fruits));
     }
 
-    public ArrayList<T> getArray(){
+    public ArrayList<T> getArray() {
         return arrayFriuts;
     }
 
-    public float getAllWeight(){
+    public float getAllWeight() {
         float weight = 0.0f;
         for (int i = 0; i < this.getArray().size(); i++) {
-            weight+= this.getFruit(i).getWeight();
+            weight += this.getFruit(i).getWeight();
 
         }
         return weight;
     }
 
-    public boolean compare(Box<?> s){
-        return this.getAllWeight()==s.getAllWeight();
+    public boolean compare(Box<?> s) {
+        return this.getAllWeight() == s.getAllWeight();
     }
 
-    public void transfer(Box<T> s){
+    public void transfer(Box<T> s) {
         s.getArray().addAll(this.getArray());
         this.getArray().clear();
     }
@@ -49,7 +49,7 @@ public class Box<T extends Fruit> {
 
 
         System.out.printf("w1: %.2f\nw2: %.2f", boxWithApples.getAllWeight(), boxWithOranges.getAllWeight());
-        System.out.println("\n"+boxWithApples.compare(boxWithOranges));
+        System.out.println("\n" + boxWithApples.compare(boxWithOranges));
         boxWithApples.transfer(anthBoxWithApples);
         System.out.println(anthBoxWithApples.getFruit(2).getWeight());
     }

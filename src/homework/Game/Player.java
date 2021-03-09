@@ -50,8 +50,8 @@ public class Player {
     }
 
     public static double[] getChanceSelf(int force1, int force2) {
-        double chanceForce1 =90.0/force1/100;
-        double chanceForce2 =90.0/force2/100;
+        double chanceForce1 = 90.0 / force1 / 100;
+        double chanceForce2 = 90.0 / force2 / 100;
 
 
         double[] chances = new double[2];
@@ -62,13 +62,10 @@ public class Player {
     }
 
 
-
-     public void hitPlayer( Player p2) {
+    public void hitPlayer(Player p2) {
         p2.hp -= this.getImpactForce();
 
     }
-
-
 
 
 }

@@ -8,26 +8,26 @@ public class GenQDemo {
         Integer iVal;
 
         System.out.println("Demonstration");
-        try{
+        try {
             for (int i = 0; i < 5; i++) {
-                System.out.println("addIssuedBooks " +i);
+                System.out.println("addIssuedBooks " + i);
                 q.put(i);
 
             }
-        }catch (QueueFullException exc){
+        } catch (QueueFullException exc) {
             System.out.println(exc);
 
         }
         System.out.println();
 
-        try{
+        try {
             for (int i = 0; i < 5; i++) {
                 System.out.println("get");
                 iVal = q.get();
                 System.out.println(iVal);
 
             }
-        }catch (QueueEmptyException exc){
+        } catch (QueueEmptyException exc) {
             System.out.println(exc);
         }
 
@@ -43,24 +43,24 @@ public class GenQDemo {
 
         try {
             for (int i = 0; i < 5; i++) {
-                System.out.println("Add" + (double) i/2);
-                q2.put((double) (i/2));
+                System.out.println("Add" + (double) i / 2);
+                q2.put((double) (i / 2));
 
 
             }
 
-        }catch (QueueFullException exc){
+        } catch (QueueFullException exc) {
             System.out.println(exc);
         }
         System.out.println();
 
-        try{
+        try {
             for (int i = 0; i < 5; i++) {
                 System.out.println("Поулчение из ку");
                 iVal = q.get();
                 System.out.println(iVal);
             }
-        }catch (QueueEmptyException exc){
+        } catch (QueueEmptyException exc) {
             System.out.println(exc);
         }
 

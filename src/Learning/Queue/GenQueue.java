@@ -10,12 +10,13 @@ public class GenQueue<T> implements IGen<T> {
         q = aRef;
         putloc = getloc = 0;
     }
-    public void put(T obj) throws QueueFullException{
 
-        if(putloc==q.length) {
+    public void put(T obj) throws QueueFullException {
+
+        if (putloc == q.length) {
             throw new QueueFullException(q.length);
         }
-            q[putloc++] = obj;
+        q[putloc++] = obj;
 
 
     }
@@ -24,10 +25,9 @@ public class GenQueue<T> implements IGen<T> {
         if (getloc == putloc) {
             throw new QueueEmptyException();
         }
-            return q[getloc++];
+        return q[getloc++];
 
     }
-
 
 
 }

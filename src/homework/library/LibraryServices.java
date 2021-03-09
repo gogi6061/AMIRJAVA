@@ -1,14 +1,14 @@
 package homework.library;
 
 
-
 import java.util.*;
 
 public class LibraryServices {
     private HashMap<Visitor, HashSet<Book>> issuedBooks = new HashMap<>();
-    public void checkNull(Book book,Order order){
+
+    public void checkNull(Book book, Order order) {
         if (book == null) {
-            System.out.printf("\nПроизведение %s не нашлось",order.getBookName());
+            System.out.printf("\nПроизведение %s не нашлось", order.getBookName());
         } else {
             System.out.printf("\nПроизведение %s нашлось", order.getBookName());
         }
@@ -16,13 +16,13 @@ public class LibraryServices {
 
     }
 
-    public Book searchBook(Catalog catalog, Order order, Visitor visitor, BlackList blackList){
+    public Book searchBook(Catalog catalog, Order order, Visitor visitor, BlackList blackList) {
         Book book1 = null;
 
 
         for (Book book : catalog.getCatalog().get(order.getAuthor())) {
-            if(blackList.getBlackList().contains(visitor)){
-                System.out.printf("\nПользователь %s в черном списке",visitor.getName());
+            if (blackList.getBlackList().contains(visitor)) {
+                System.out.printf("\nПользователь %s в черном списке", visitor.getName());
                 break;
 
             }
@@ -31,7 +31,6 @@ public class LibraryServices {
                     System.out.printf("\nИзвините, но экзепляры %s закончились", book.getName());
                     break;
                 }
-
 
 
                 if (visitor.getVisitorBooks().contains(book)) {
@@ -46,17 +45,18 @@ public class LibraryServices {
             }
 
         }
-        checkNull(book1,order);
+        checkNull(book1, order);
         return book1;
 
     }
+
     public void addBook(Order order, Catalog catalog, Visitor visitor, BlackList blackList) {
         Book book1 = searchBook(catalog, order, visitor, blackList);
 
 
         try {
-            if(book1 != null){
-                addIssuedBooks(visitor,book1,issuedBooks);
+            if (book1 != null) {
+                addIssuedBooks(visitor, book1, issuedBooks);
             }
 
         } catch (NullPointerException exc) {

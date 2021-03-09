@@ -44,7 +44,6 @@ public class Car implements Runnable {
             MainClass.cd2.countDown();
 
 
-
         } catch (Exception e) {
             e.printStackTrace();
         }

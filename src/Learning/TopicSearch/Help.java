@@ -33,9 +33,10 @@ public class Help {
             System.out.println("error");
             return false;
         }
-        return  false;
+        return false;
     }
-    String getSelection(){
+
+    String getSelection() {
         String topic = "";
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -43,18 +44,13 @@ public class Help {
         System.out.println("Укажите тему:");
         try {
             topic = br.readLine();
-        }
-        catch (IOException exc){
+        } catch (IOException exc) {
             System.out.println("error IO");
         }
         return topic;
 
 
     }
-
-
-
-
 
 
 }

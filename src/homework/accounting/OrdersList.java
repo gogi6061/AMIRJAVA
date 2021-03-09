@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class OrdersList {
-     private ArrayList<Order> ordersList = new ArrayList<>();
+    private ArrayList<Order> ordersList = new ArrayList<>();
 
-    public  void getOrdersList() {
+    public void getOrdersList() {
         for (int i = 0; i < ordersList.size(); i++) {
 
 
@@ -19,7 +19,7 @@ public class OrdersList {
         }
     }
 
-    public  void setInOrderList(Order... o) {
+    public void setInOrderList(Order... o) {
         ordersList.addAll(Arrays.asList(o));
     }
 
